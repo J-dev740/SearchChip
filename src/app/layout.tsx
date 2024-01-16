@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import NavBar from './components/navbar'
+import SideBar from './components/sidebar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +18,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+      </head>
+      <body className={inter.className}>
+        {/* navbar */}
+        <div 
+        // style={{backgroundImage:`url(https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=600)`}}
+        className='relative  bg-center  bg-gray-950 bg-no-repeat'>
+          <SideBar/>
+          <NavBar />
+          {children}
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+      </body>
     </html>
   )
 }
