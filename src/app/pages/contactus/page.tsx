@@ -4,7 +4,8 @@ import React, { useState } from 'react'
 function ContactUs() {
 
   return (
-    <div className=" bg-transparent w-full bg-[url('./bg.webp')] py-8 bg-cover bg-center bg-no-repeat min-h-screen h-fit flex  flex-col justify-center items-center">
+    <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat">
+    <div className="  w-full bg-black bg-opacity-75 py-8  min-h-screen h-fit flex  flex-col justify-center items-center">
         <div className='w-[75%] h-[75%] flex flex-col justify-between items-center p-4 gap-[10px]'>
             {/* search filter  */}
 
@@ -23,6 +24,7 @@ function ContactUs() {
 
         </div>
 
+    </div>
     </div>
   )
 }
