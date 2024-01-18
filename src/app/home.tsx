@@ -1,11 +1,36 @@
-import React from 'react'
-import { FaFacebook } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { GrYoutube } from "react-icons/gr";
+'use client';
+import React, { useEffect, useState } from 'react'
+import getBlogPosts from '@/utils';
 import Logo from './logo.png'
 import Image from 'next/image';
+
 function LandingPage() {
+const [stories,setStories]=useState<any[]>([])
+useEffect(() => {
+const fetchStories=async()=>{
+try {
+    
+    const stories= await getBlogPosts('shortStories');
+    console.log(stories);
+    const metadata=stories.map((item)=>{
+        return {
+            slug:item.fields.slug,
+            title:item.fields.title,
+            img:item.fields.titleImage
+        }
+
+    })
+    // console.log(metadata);
+    setStories(metadata)
+    console.log('stories',stories)
+    
+} catch (error) {
+    
+}
+}
+fetchStories();
+}, [])
+
     return (
         <div 
         // style={{backgroundImage:`url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg)`}}
@@ -42,19 +67,25 @@ function LandingPage() {
                 {/* title */}
                 <span className='font-bold uppercase text-start text-[32px] w-full'>Short Stories </span>
                 {/* stories div */}
-                <div className='flex flex-row w-full gap-[20px] overflow-auto h-fit justify-between items-center py-2'>
+                <div className='flex flex-row w-[80%] gap-[30px] overflow-x-scroll no-scrollbar h-fit justify-between items-center py-4 px-4'>
                     {
-                        new Array(4).fill(0).map((item,index)=>{
+                       stories.length>0? stories.map((item,index)=>{
                             return (
-                                <div className='flex flex-col  justify-between  items-center '>
+                                <div className='flex flex-col hover:scale-110 ease-linear duration-150   justify-between  items-center '>
                                     {/* image div */}
-                                    <div className='flex w-[200px] h-[300px] rounded-[20px] bg-white '></div>
+                                    <div 
+                                    style={{backgroundImage:`url(https:${item.img.fields.file.url})`}}
+                                    className='group flex w-[200px] h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
+                                        <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
+                                            <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Go to storyline</span>
+                                        </div>
+                                    </div>
                                     {/* title div  */}
-                                    <div className='flex w-full text-end items-center'>Title</div>
+                                    <div className='flex w-full text-end items-center'>{item.title}</div>
                                 </div>
                             )
                         })
-                    }
+                    :''}
 
                 </div>
             </div>

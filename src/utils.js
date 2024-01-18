@@ -6,11 +6,11 @@ const client = createClient({
 });
 
 // Retrieve the list of blog posts from Contentful
-const getBlogPosts = async () => {
+const getBlogPosts = async (type='blogPosts') => {
     // console.log('getting content types.....')
     // console.log(client.getContentTypes)
   const response = await client.getEntries({
-    content_type: 'blogPost',
+    content_type: type,
   });
 
   return response.items;
