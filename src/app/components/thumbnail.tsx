@@ -7,7 +7,7 @@ interface Ithumb {
     setLink:(link:string)=>void;
 }
 
-export const YouTubeThumbnail = ({ setLink,playlistId }:Ithumb) => {
+export const YouTubeThumbnail =({ setLink,playlistId }:Ithumb) => {
     console.log('youtubethumbnailpid',playlistId)
     const [ThumbnailUrl, setThumbnailUrl] = useState<any[]>([]);
   
@@ -18,26 +18,33 @@ export const YouTubeThumbnail = ({ setLink,playlistId }:Ithumb) => {
             const data= await res.json();
             // console.log(data);
             const ThumbnailUrls=data.items.map((item:any)=> item.snippet.thumbnails.medium.url)
-            console.log(ThumbnailUrls)
+            setLink(`https://www.youtube.com/watch?v=${data.items[0].snippet.resourceId.videoId}`)
+            console.log('thumbnailurls.........................')
+            // console.log(ThumbnailUrls)
             setThumbnailUrl(data.items)
-            setLink(`https://www.youtube.com/watch?v=${ThumbnailUrl[0].snippet.resourceId.videoId}`)
             
         } catch (error) {
             console.log('error getting data',error)
         }
       };
   
-      fetchThumbnail();
+      fetchThumbnail().then(()=>{
+        console.log(ThumbnailUrl)
+        if(ThumbnailUrl.length>0) setLink(`https://www.youtube.com/watch?v=${ThumbnailUrl[0].snippet.resourceId.videoId}`)
+        else console.log('something went wrong ')
+      })
     }, [playlistId]);
-    console.log('thumbnailUrl....')
-  console.log(ThumbnailUrl)
+    // console.log('thumbnailUrl....')
+//   console.log(ThumbnailUrl)
+
+
     return (
       <div className='flex fle-col justify-between items-center  overflow-y-scroll no-scrollbar mb-auto rounded-[20px] p-2 w-fit h-screen    '>
        
       {ThumbnailUrl.length>0 && (
         <ul className='flex flex-col gap-8 items-center justify-start p-4 my-auto space-y-[10px] rounded-[20px] '>
             {ThumbnailUrl.map((item,index)=>{
-                // if(index==0)
+                // if(index==0)setLink(`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`)
                 return (
                     <li
                     key={index} 

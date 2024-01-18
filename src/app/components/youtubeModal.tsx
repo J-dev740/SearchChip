@@ -49,6 +49,7 @@ const [vidLink,setvidLink]=useState('');
                             // console.log(link);
                             console.log('set the video link as ',link)
                             setvidLink(link);
+                            console.log(vidLink)
                         }}
                          playlistId={playlistID}/>
                     </div>

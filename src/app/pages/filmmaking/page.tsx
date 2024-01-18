@@ -59,7 +59,7 @@ function FilmMaking() {
   const [Playlist, setPlaylist] = useState(pid)
   return (
     <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat ">
-      <div className=" relative  w-full bg-black bg-opacity-75 py-8 min-h-screen h-fit flex  flex-col justify-center no-scrollbar items-center">
+      <div className=" relative  w-full bg-black  bg-opacity-85 py-8 min-h-screen h-fit flex  flex-col justify-center no-scrollbar items-center">
         <ul className='grid grid-cols-3 w-full h-fit  gap-y-[20px] gap-x-[10px] '>
           {
             youtubelist.map((item, index) => {
@@ -71,9 +71,9 @@ function FilmMaking() {
                     onClick={() => setModal(true)}
                     style={{backgroundImage:`url(${item.img})`}}
                     className=' group hover:scale-110 ease-linear duration-300 flex w-[300px] h-[200px] rounded-[10px] bg-white items-center text-wrap justify-center  object-center bg-cover bg-center bg-no-repeat'>
-                      <div className='ease-in-out duration-200 hidden group-hover:flex w-full h-full flex-row items-center justify-center gap-2  bg-black bg-opacity-75 hover:text-center uppercase text-wrap font-bold text-white'>
-                        <span className='w-fit font-roboto font-light'>#{index}</span>
-                        <span className='w-fit font-roboto font-extrabold'>
+                      <div className='ease-in-out duration-200  flex w-full h-full flex-row items-center justify-center gap-2  bg-black bg-opacity-60 hover:text-center uppercase text-wrap font-bold text-white'>
+                        {/* <span className='w-fit font-roboto font-light'>{index}</span> */}
+                        <span className='w-fit font-roboto text-[32px] font-extrabold'>
                       {item.pname}
                         </span></div>
                     </div>

@@ -63,9 +63,9 @@ fetchStories();
 
             </div>
             {/* upload your stories  */}
-            <div className='flex flex-col justify-between items-center py-2 px-2 text-[16px] font-bold font-roboto'>
+            <div className='flex flex-col justify-between items-start py-2 px-2 text-[16px] font-bold font-roboto'>
                 {/* title */}
-                <span className='font-bold uppercase text-start text-[32px] w-full'>Short Stories </span>
+                <span className='font-bold uppercase text-start text-[32px] w-[80%] pl-4'>Short Stories </span>
                 {/* stories div */}
                 <div className='flex flex-row w-[80%] gap-[30px] overflow-x-scroll no-scrollbar h-fit justify-between items-center py-4 px-4'>
                     {
