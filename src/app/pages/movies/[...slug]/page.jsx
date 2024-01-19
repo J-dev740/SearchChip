@@ -1,3 +1,4 @@
+// 'use client';
 import React from 'react'
 import getBlogPosts from '@/utils';
 import {createClient} from 'contentful'
@@ -6,7 +7,7 @@ const client = createClient({
     accessToken: 'j-XgL8nTm1qouIKSQuv7dHOyg3S8qkVTTKbuAWhHHcI',
   });
 
-async function slug({params}) {
+export const  slug= async({params})=> {
     const {slug}=params
     const post = await client.getEntries({
       content_type:'blogPost',
@@ -53,4 +54,3 @@ async function slug({params}) {
   )
 }
 
-export default slug
