@@ -7,7 +7,7 @@ const client = createClient({
     accessToken: 'j-XgL8nTm1qouIKSQuv7dHOyg3S8qkVTTKbuAWhHHcI',
   });
 
-export const  slug= async({params})=> {
+export const  Posts= async({params})=> {
     const {slug}=params
     const post = await client.getEntries({
       content_type:'blogPost',
