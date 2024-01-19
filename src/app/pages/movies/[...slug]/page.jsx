@@ -5,28 +5,7 @@ const client = createClient({
     space: '5xpzpeuq39x5',
     accessToken: 'j-XgL8nTm1qouIKSQuv7dHOyg3S8qkVTTKbuAWhHHcI',
   });
-// export async function getStaticParams(){
-//     const items=await getBlogPosts();
-//     const paths=items.map((item)=>{
-//         return {
-//           slug:item.fields.slug
-//         }
-//     })
-//     // return {
-//     //     paths,
-//     //     fallback:false,
-//     // }
-// //  console.log("hello world");
-// }
-// export const getSProps=async ({params})=>{
-//     const {items} = await client.getEntries({
-//         content_type:'blogPost',
-//         'fields.slug':params.slug
-//     })
-//     return {
-//         props:{post:items[0]}
-//     }
-// }
+
 async function slug({params}) {
     const {slug}=params
     const post = await client.getEntries({
