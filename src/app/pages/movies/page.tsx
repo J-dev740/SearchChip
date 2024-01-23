@@ -62,7 +62,7 @@ const posts=await getBlogPosts();
                 <div className='flex flex-row justify-start gap-[10px] items-center w-fit text-wrap'>
                     {/* image part  */}
                     <Link
-                    href={'/pages/movies/posts/'+post.fields.slug}
+                    href={'/pages/movies/'+post.fields.slug}
                     >
                     <div
                     style={{backgroundImage:`url(https:${post.fields.titleImage.fields.file.url})`}}

@@ -7,11 +7,12 @@ const client = createClient({
     accessToken: 'j-XgL8nTm1qouIKSQuv7dHOyg3S8qkVTTKbuAWhHHcI',
   });
 
-export const  Posts= async({params})=> {
+const  Posts= async({params})=> {
     const {slug}=params
+    console.log('hello world')
     const post = await client.getEntries({
       content_type:'blogPost',
-      'fields.slug':slug[0]
+      'fields.slug':slug,
     })
     console.log(slug);
     console.log('reading post')
@@ -54,3 +55,4 @@ export const  Posts= async({params})=> {
   )
 }
 
+export default Posts;
