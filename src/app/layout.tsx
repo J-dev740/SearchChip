@@ -23,10 +23,10 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         {/* navbar */}
-        <div className='bg-[url("./bg.webp")] bg-cover bg-center   bg-no-repeat'>
+        <div className='bg-[url("./bg.webp")] bg-cover bg-center   bg-no-repeat '>
         <div 
         // style={{backgroundImage:`url(https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=600)`}}
-        className='relative bg-black bg-opacity-75 '>
+        className='relative bg-black bg-opacity-75  '>
           <SideBar/>
           <NavBar />
           {children}

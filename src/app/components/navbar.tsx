@@ -50,7 +50,7 @@ function NavBar() {
         // </nav>
 
 
-        <nav className=" sticky top-0 z-30 flex flex-row justify-between items-center p-[10px]   rounded-[20px] bg-transparent bg-opacity-100  backdrop-blur-lg">
+        <nav className=" sticky top-0 z-30 flex flex-row justify-between items-center px-[10px]   rounded-[20px] bg-transparent bg-opacity-100  backdrop-blur-lg">
             <div className=" w-full flex flex-row flex-wrap items-center justify-between mx-auto p-2 uppercase font-inter">
                 <div className=" flex w-[50px] h-[50px]">
                     <Link
@@ -72,7 +72,7 @@ function NavBar() {
                     </svg>
                 </button>
                 <div className="hidden w-full md:flex md:w-auto" id="navbar-default">
-                    <ul className="font-bold md:text-[24px] font-roboto md:justify-between text-white flex flex-col p-4 md:p-0 mt-4  rounded-lg md:flex-row md:space-x-[100px] rtl:space-x-reverse md:mt-0 ">
+                    <ul className="font-bold md:text-[20px]  font-roboto md:justify-between text-white flex flex-col px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[100px] space-x-[50px] rtl:space-x-reverse md:mt-0 ">
                         <li>
 
                             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className=" hover:scale-105 ease-in duration-100 text-center bg-transparent inline-flex items-center " type="button">Learn FilmMaking <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
