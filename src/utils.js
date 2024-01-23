@@ -10,7 +10,7 @@ const getBlogPosts = async (type='blogPost') => {
     // console.log('getting content types.....')
     // console.log(client.getContentTypes)
   const response = await client.getEntries({
-    content_type: type,
+    content_type: type.toString(),
   });
 
   return response.items;
