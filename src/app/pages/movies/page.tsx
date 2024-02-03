@@ -44,7 +44,7 @@ const  Movies= async ()=> {
 
 const posts=await getBlogPosts();
 
-    // console.log("reading posts...",posts[0].fields.titleImage?.toString());
+    console.log("reading posts...",posts[0].fields);
     // console.log(posts)
     // console.log(posts[1]?.fields?.summary?.content[0]?.content[0].value)
   return (
@@ -65,18 +65,18 @@ const posts=await getBlogPosts();
                     href={'/pages/movies/'+post.fields.slug}
                     >
                     <div
-                    style={{backgroundImage:`url(https:${post.fields.titleImage.fields.file.url})`}}
+                    style={{backgroundImage:`url(https:${post.fields.titleImge.fields.file.url})`}}
                      className='flex w-[400px] h-[200px] bg-transparent rounded-[20px] p-2 bg-cover bg-center bg-no-repeat '>
                         {/* <Image 
-                        src={'https:'+post.fields.titleImage.fields.file.url}
+                        src={'https:'+post.fields.titleImge.fields.file.url}
                         alt='action-shot'
-                        width={post.fields.titleImage.fields.file.details.image.width}
-                        height={post.fields.titleImage.fields.file.details.image.width}
+                        width={post.fields.titleImge.fields.file.details.image.width}
+                        height={post.fields.titleImge.fields.file.details.image.width}
                         className='flex object-center object-cover rounded-lg'
                         /> */}
 
 
-                        {/* <img src={`${post.fields.titleImage}`} alt='.../' className=' flex object-center object-contain bg-slate-400'/> */}
+                        {/* <img src={`${post.fields.titleImge}`} alt='.../' className=' flex object-center object-contain bg-slate-400'/> */}
                      </div>
                         </Link>
                     {/* title and story part  */}
