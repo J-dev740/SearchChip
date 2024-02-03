@@ -44,7 +44,8 @@ const  Movies= async ()=> {
 
 const posts=await getBlogPosts();
 
-    console.log("reading posts...",posts[0].fields);
+    // console.log("reading posts...",posts[0]?.fields?.story[0]?.content);
+    // console.log(posts[2]?.fields?.story.content[0].content[0].value)
     // console.log(posts)
     // console.log(posts[1]?.fields?.summary?.content[0]?.content[0].value)
   return (

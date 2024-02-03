@@ -19,7 +19,7 @@ const  Posts= async({params})=> {
     console.log(slug);
     console.log('reading post')
     console.log(post);
-    const{title,summary,titleImge}=post.items[0].fields;
+    const{title,summary,titleImge,story}=post.items[0].fields;
     console.log(title,summary,titleImge)
   return (
     <div className="relative bg-transparent w-full bg-[url('./bg.webp')] py-8 bg-cover bg-center bg-no-repeat min-h-screen h-fit flex  flex-col justify-center items-center">
@@ -44,10 +44,8 @@ const  Posts= async({params})=> {
                     {/* title and story part  */}
                     <div className='flex w-full  flex-col justify-between items-center text-[24px]  gap-3'>
                         <p>{title}</p>
-                        <p className=' flex justify-center items-center text-[16px]'>
-                          StoryLine------------------------------------------------------------<br/>
-                        -------------------------------------------------------------------------<br/>
-                        -------------------------------------------------------------------------<br/></p>
+                        <p className=' flex flex-wrap text-wrap justify-center items-center text-[16px]'>
+                          {story.content[0].content[0].value}</p>
                     </div>
 
                 </div>
