@@ -26,15 +26,15 @@ const [vidLink,setvidLink]=useState('');
                         className='text-white text-[32px] font-bold font-roboto'>X</span>
                 </div>
                 {/* body */}
-                <div className='flex flex-row  gap-[20px] items-start w-[90%]  rounded-[20px] h-fit'>
+                <div className='flex md:flex-row flex-col md:gap-[20px] gap-[4px] items-start w-[90%]  rounded-[20px] h-fit'>
                     {/* section 1 player  */}
-                    <div className='flex  flex-col justify-between items-center  w-[70%] h-fit rounded-[20px]  '>
+                    <div className='flex  flex-col justify-between items-center  md:w-[70%] w-full md:h-fit h-[250px] rounded-[10px] md:rounded-[20px]  '>
                         <ReactPlayer
                             controls={true}
                             // light={true}
                             wrapper={({ children }) => {
                                 return (
-                                    <div className='flex flex-col w-[80%]  h-[400px] rounded-[30px] overflow-hidden object-center object-cover '>
+                                    <div className='flex flex-col md:w-[80%] w-[90%] md:h-[400px] h-[250px] md:rounded-[30px] rounded-[20px] overflow-hidden object-center object-cover '>
                                         {children}
                                     </div>
                                 )
@@ -42,7 +42,7 @@ const [vidLink,setvidLink]=useState('');
                             url={vidLink} />
                     </div>
                     {/* section 2 playlist  */}
-                    <div className='flex flex-col justify-start items-center w-[30%]  rounded-[20px] my-auto  py-4  h-fit min-h-screen  px-1'>
+                    <div className='flex flex-col justify-start items-center md:w-[30%] w-[98%]  rounded-[20px] my-auto  py-4  h-fit min-h-screen  px-1'>
                         {/* <YouTubeThumbnail videoUrl={`${playlist}&index=0`}/> */}
                         <YouTubeThumbnail
                         setLink={(link:string)=>{

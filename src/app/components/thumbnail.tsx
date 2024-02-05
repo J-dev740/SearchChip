@@ -49,7 +49,7 @@ export const YouTubeThumbnail =({ setLink,playlistId }:Ithumb) => {
                     <li
                     key={index} 
                     style={{backgroundImage:`url(${item.snippet.thumbnails.medium.url})`}}
-                    className='group flex bg-cover bg-center bg-no-repeat object-center w-[300px] h-[180px] rounded-[20px] '>
+                    className='group flex flex-grow  bg-cover bg-center bg-no-repeat object-center md:w-[300px] w-[280px] h-[180px] md:h-[180px] rounded-[20px] '>
                         <div 
                         onClick={()=>setLink(`https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`)}
                         className=' ease-in-out duration-150  hidden group-hover:flex w-full h-full items-center text-center

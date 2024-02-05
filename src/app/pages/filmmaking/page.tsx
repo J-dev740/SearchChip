@@ -66,7 +66,7 @@ function FilmMaking() {
               return (
                 <li
                   key={index}
-                  className={(index == 0 ? 'col-span-3' : 'col-span-1') + ' flex  justify-center items-center rounded-[20px]'}>
+                  className={(index == 0 ? 'sm:col-span-3' : 'sm:col-span-1') + ' flex col-span-3 justify-center items-center rounded-[20px]'}>
                   <div
                     onClick={() => setModal(true)}
                     style={{backgroundImage:`url(${item.img})`}}

@@ -2,7 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import getBlogPosts from '@/utils';
 import Logo from './logo.png'
+import logo from '../app/assets/logo.svg'
 import Image from 'next/image';
+
 
 function LandingPage() {
 const [stories,setStories]=useState<any[]>([])
@@ -38,36 +40,40 @@ fetchStories();
             <div className="relative bg-black bg-opacity-75 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
-            <div className='max-w-full  w-[80%]  h-fit  flex flex-col gap-8 items-center text-wrap'>
+            <div className='max-w-full mt-[300px] md:mt-0  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-8 items-center text-wrap'>
                 {/* logo */}
                 <div
                 className='flex object-center self-center '
                 // style={{backgroundImage:`url(${Logo})`}}
                 >
-                <Image src={Logo} alt={'image'} />
+                <Image 
+                className='flex md:w-auto md:h-auto w-[120px] h-[120px]'
+                src={Logo} alt={'image'} />
                 </div>
                 {/* header */}
                 <div className='flex flex-col justify-between  w-full items-start p-2 my-auto text-wrap'>
-                    <p className='text-[74px] text-white tracking-widest w-full text-center font-extrabold font-inter'>Prathibha Productions</p>
-                    <p className='text-[32px] text-white tracking-widest items-center text-center uppercase font-extrabold font-inter w-full'>Cinema is an art, Not a Business</p>
+                    {/* <p className='text-[74px] text-white tracking-widest w-full text-center font-extrabold font-inter'>Prathibha Productions</p> */}
+                    <Image className='flex items-center justify-center object-center w-full h-[90px] md:h-[200px] '
+                    src={logo} alt={'logo'}/>
+                    {/* <p className='text-[32px] text-white tracking-widest items-center text-center uppercase font-extrabold font-inter w-full'>Cinema is an art, Not a Business</p> */}
                 </div>
                 {/* aboutus */}
                 <div className=' relative flex flex-col justify-between items-center p-2 text-center   text-wrap'>
-                    <span className='text-[32px] font-bold font-inter uppercase '>About Us</span>
-                    <p className='max-w-full w-[80%] text-[32px] font-medium font-roboto py-4 my-2 text-start'>Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
+                    <span className='text-[12px] md:text-[32px] font-bold font-inter uppercase '>About Us</span>
+                    <p className='max-w-full w-[80%] text-[10px] md:text-[32px] font-medium font-roboto py-4 my-2 text-start'>Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
                         from all walks of life , not just the usual film crowd. Join us in making movies 
                         that break the rules  and share  unique perspectives.Welcome to the new era of FilmMaking.
                     </p>
-                    <span className='w-full   p-2 text-[30px] font-medium text-end uppercase tracking-tight'>- Amal Akshay</span>
+                    <span className='w-full   p-1 text-[10px] md:text-[30px] font-medium text-end uppercase tracking-tight'>- Amal Akshay</span>
                 </div>
 
             </div>
             {/* upload your stories  */}
-            <div className='flex flex-col justify-between items-start py-2 px-2 text-[16px] font-bold font-roboto'>
+            <div className='flex flex-col  justify-between items-start py-2 px-2 mb-[30px] text-[16px] font-bold font-roboto'>
                 {/* title */}
-                <span className='font-bold uppercase text-start text-[32px] w-[80%] pl-4'>Short Stories </span>
+                <span className='font-bold uppercase text-start text-[20px] sm:text-[32px] w-[80%] pl-4'>Short Lessons </span>
                 {/* stories div */}
-                <div className='flex flex-row w-[80%] gap-[30px] overflow-x-scroll no-scrollbar h-fit justify-between items-center py-4 px-4'>
+                <div className='flex  flex-col sm:flex-row sm:w-[80%] w-fit sm:gap-[30px] gap-[10px] sm:overflow-x-scroll overflow-y-scroll no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
                     {
                        stories.length>0? stories.map((item,index)=>{
                             return (
@@ -75,7 +81,7 @@ fetchStories();
                                     {/* image div */}
                                     <div 
                                     style={{backgroundImage:`url(https:${item.img.fields.file.url})`}}
-                                    className='group flex w-[200px] h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
+                                    className='group flex sm:w-[200px] w-[200px] h-[250px] sm:h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
                                         <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
                                             <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Go to storyline</span>
                                         </div>
@@ -89,6 +95,9 @@ fetchStories();
 
                 </div>
             </div>
+            {/* copyright */}
+            <div className='flex flex-row items-center text-center font-inter  flex-wrap text-[8px] text-white  sm:text-[12px] mt-[12px]'>Copyright © prathibhaprosuctions. All Right Reserved.</div>
+
 
             </div>
 

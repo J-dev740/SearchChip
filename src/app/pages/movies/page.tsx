@@ -52,22 +52,23 @@ const posts=await getBlogPosts();
     <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat">
     <div className="relative bg-black bg-opacity-75 w-full object-center align-middle py-8   min-h-screen h-fit flex  flex-col justify-center items-center">
 
-        <ul className='flex flex-col justify-between items-center h-screen overflow-y-scroll gap-y-[10px] no-scrollbar p-2 w-[80%] '>
+        <ul className='flex flex-col justify-between items-center h-screen overflow-y-scroll gap-[30px] md:gap-y-[10px] no-scrollbar p-2 md:w-[80%] w-[98%] '>
             
           {posts.length>0?posts.map((post:any,index)=>{
             return (
                 <li 
                 key={post.sys.id}
                 // key={index}
-                className='flex w-fit h-[300px] items-center justify-start'>
-                <div className='flex flex-row justify-start gap-[10px] items-center w-fit text-wrap'>
+                className='flex md:w-fit md:h-[300px] h-fit w-[400px] items-start justify-start'>
+                <div className='flex md:flex-row flex-col md:justify-start items-center p-4  gap-[10px] md:items-center w-fit text-wrap'>
                     {/* image part  */}
                     <Link
+                    className='flex self-start p-2'
                     href={'/pages/movies/'+post.fields.slug}
                     >
                     <div
                     style={{backgroundImage:`url(https:${post.fields.titleImge.fields.file.url})`}}
-                     className='flex w-[400px] h-[200px] bg-transparent rounded-[20px] p-2 bg-cover bg-center bg-no-repeat '>
+                     className='flex md:w-[400px] w-[300px] h-[200px] bg-transparent rounded-[20px] p-2 bg-cover bg-center bg-no-repeat '>
                         {/* <Image 
                         src={'https:'+post.fields.titleImge.fields.file.url}
                         alt='action-shot'
@@ -83,9 +84,10 @@ const posts=await getBlogPosts();
                     {/* title and story part  */}
                     <div className='flex w-full flex-col justify-between text-wrap items-start gap-3 uppercase font-inter font-bold'>
                         <p>{post.fields.title}</p>
-                        <p>StoryLine------------------------------------------------------------<br/>
-                        -------------------------------------------------------------------------<br/>
-                        -------------------------------------------------------------------------<br/></p>
+                        <p className='flex flex-wrap flex-shrink text-wrap'>
+                          StoryLine--------------------------------------------------------
+                        -------------------------------------------------------------------------
+                        -------------------------------------------------------------------------</p>
                     </div>
 
                 </div>
