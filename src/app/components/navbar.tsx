@@ -81,7 +81,7 @@ function NavBar() {
                             </button>
 
                             {/* <!-- Dropdown menu --> */}
-                            <div id="dropdown" className="  hidden bg-transparent rounded-[10px] divide-y divide-white shadow w-auto text-wrap dark:bg-gray-700">
+                            <div id="dropdown" className="  hidden bg-black z-50 bg-opacity-100 backdrop-blur-lg rounded-[10px] divide-y divide-white shadow w-auto text-wrap dark:bg-gray-700">
                                 <ul className="flex  flex-col py-2 text-md text-white dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                     <li>
                                         <a href="#" className="hover:scale-105 ease-in duration-100 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tamil</a>
