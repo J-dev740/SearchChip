@@ -40,7 +40,7 @@ fetchStories();
             <div className="relative bg-black bg-opacity-75 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
-            <div className='max-w-full mt-[300px] md:mt-0  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-8 items-center text-wrap'>
+            <div className='max-w-full mt-[300px] md:mt-[50px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
                 {/* logo */}
                 <div
                 className='flex object-center self-center '
@@ -59,12 +59,12 @@ fetchStories();
                 </div>
                 {/* aboutus */}
                 <div className=' relative flex flex-col justify-between items-center p-2 text-center   text-wrap'>
-                    <span className='text-[12px] md:text-[32px] font-bold font-inter uppercase '>About Us</span>
-                    <p className='max-w-full w-[80%] text-[10px] md:text-[32px] font-medium font-roboto py-4 my-2 text-start'>Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
+                    <span className='text-[12px] md:text-[22px] font-bold font-inter uppercase '>About Us</span>
+                    <p className='max-w-full w-[80%] text-[10px] md:text-[22px] font-medium font-roboto py-4 my-2 text-start'>Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
                         from all walks of life , not just the usual film crowd. Join us in making movies 
                         that break the rules  and share  unique perspectives.Welcome to the new era of FilmMaking.
                     </p>
-                    <span className='w-full   p-1 text-[10px] md:text-[30px] font-medium text-end uppercase tracking-tight'>- Amal Akshay</span>
+                    <span className='w-full   p-1 text-[10px] md:text-[20px] font-medium text-end uppercase tracking-tight pr-4'>- Amal Akshay</span>
                 </div>
 
             </div>
@@ -96,7 +96,7 @@ fetchStories();
                 </div>
             </div>
             {/* copyright */}
-            <div className='flex flex-row items-center text-center font-inter  flex-wrap text-[8px] text-white  sm:text-[12px] mt-[12px]'>Copyright © prathibhaprosuctions. All Right Reserved.</div>
+            <div className='flex flex-row items-center text-center font-inter  flex-wrap text-[8px] text-white  sm:text-[12px] mt-[12px]'>Copyright © prathibhaproductions. All Right Reserved.</div>
 
 
             </div>

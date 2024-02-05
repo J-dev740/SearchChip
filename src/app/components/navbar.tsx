@@ -72,7 +72,7 @@ function NavBar() {
                     </svg>
                 </button>
                 <div className="hidden w-full h-fit  md:flex md:w-auto" id="navbar-default">
-                    <ul className="font-bold md:text-[20px]  font-roboto md:justify-between text-white flex flex-col items-end  px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[50px] space-x-[20px] rtl:space-x-reverse md:mt-0 ">
+                    <ul className="font-bold md:text-[15px]  font-roboto md:justify-between text-white flex flex-col items-end  px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[50px] space-x-[20px] rtl:space-x-reverse md:mt-0 ">
                         <li className='flex flex-row  flex-grow  md:flex-col'>
 
                             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className=" hover:scale-105 ease-in duration-100 text-center bg-transparent inline-flex items-center " type="button">Learn FilmMaking <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
