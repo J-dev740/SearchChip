@@ -22,8 +22,9 @@ const Posts = async ({ params }) => {
   const { title, summary, titleImge, story } = post.items[0].fields;
   console.log(title, summary, titleImge);
   return (
-    <div className="relative bg-transparent w-full bg-[url('./bg.webp')] py-8 bg-cover bg-center bg-no-repeat min-h-screen h-fit flex  flex-col justify-center items-center">
-      <div className="flex w-full h-fit items-center justify-start">
+    <div className="relative  w-full bg-[url('./bg.webp')] bg-opacity-75 py-8 bg-cover bg-center bg-no-repeat min-h-screen h-fit flex  flex-col justify-center items-center">
+      <div className="flex w-screen h-screen justify-center items-center  bg-black bg-opacity-75">
+      <div className="flex w-full h-fit  items-center justify-start ">
         <div className="flex flex-col justify-between gap-[10px] items-center w-full h-fit text-wrap">
           {/* image part  */}
           <div
@@ -45,11 +46,13 @@ const Posts = async ({ params }) => {
           {/* title and story part  */}
           <div className="flex w-full  flex-col justify-between items-center  text-[20px] md:text-[24px]  gap-3">
             <p>{title}</p>
-            <p className=" flex flex-wrap text-wrap w-[80%] justify-center items-center text-[16px]">
+            <p className=" flex flex-wrap text-wrap w-[80%]  text-white justify-center items-center text-[16px]">
               {story.content[0].content[0].value}
             </p>
           </div>
         </div>
+      </div>
+
       </div>
     </div>
   );

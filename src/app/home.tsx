@@ -1,10 +1,16 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import getBlogPosts from '@/utils';
+import { getBlogPosts1 }from '@/utils';
 import Logo from './logo.png'
 import logo from '../app/assets/logo.svg'
 import Image from 'next/image';
-
+import { createClient } from "contentful";
+const client = createClient({
+//   space: "7oo9puuj7iqt",
+//   accessToken: "YhY12sA6qt2h-XslJiNtmYFWysR0vjcXNRlosSk7Tn8",
+  space: '5xpzpeuq39x5',
+  accessToken: 'j-XgL8nTm1qouIKSQuv7dHOyg3S8qkVTTKbuAWhHHcI',
+});
 
 function LandingPage() {
 const [stories,setStories]=useState<any[]>([])
@@ -12,7 +18,12 @@ useEffect(() => {
 const fetchStories=async()=>{
 try {
     
-    const stories= await getBlogPosts('shortStories');
+    const stories= await getBlogPosts1('shortStories');
+    // const response = await client.getEntries({
+    //     content_type: "shortStories",
+    //   });
+    // const stories=response.items;
+    console.log('stories------------------------->')
     console.log(stories);
     const metadata=stories.map((item)=>{
         return {
@@ -40,7 +51,7 @@ fetchStories();
             <div className="relative bg-black bg-opacity-75 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
-            <div className='max-w-full mt-[300px] md:mt-[50px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
+            <div className='max-w-full mt-[150px] md:mt-[50px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
                 {/* logo */}
                 <div
                 className='flex object-center self-center '

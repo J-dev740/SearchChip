@@ -1,6 +1,6 @@
 // 'use client';
 import React, { useEffect, useState } from 'react'
-import getBlogPosts from '../../../utils'
+import {getBlogPosts} from '../../../utils'
 import Image from 'next/image'
 import { createClient } from 'contentful';
 import {InferGetStaticPropsType, GetStaticProps } from 'next';
@@ -44,7 +44,7 @@ const  Movies= async ()=> {
 
 const posts=await getBlogPosts();
 
-    // console.log("reading posts...",posts[0]?.fields?.story[0]?.content);
+    // console.log("reading posts...",posts[0]?.fields);
     // console.log(posts[2]?.fields?.story.content[0].content[0].value)
     // console.log(posts)
     // console.log(posts[1]?.fields?.summary?.content[0]?.content[0].value)
@@ -82,12 +82,10 @@ const posts=await getBlogPosts();
                      </div>
                         </Link>
                     {/* title and story part  */}
-                    <div className='flex w-full flex-col justify-between text-wrap items-start gap-3 uppercase font-inter font-bold'>
+                    <div className='flex w-[87%] self-start flex-col justify-between text-wrap items-start gap-3 uppercase font-inter font-bold'>
                         <p>{post.fields.title}</p>
-                        <p className='flex flex-wrap flex-shrink text-wrap'>
-                          StoryLine--------------------------------------------------------
-                        -------------------------------------------------------------------------
-                        -------------------------------------------------------------------------</p>
+                        <p className='flex flex-wrap flex-shrink font-inter font-light text-white  text-wrap'>
+                         {post.fields.summary}</p>
                     </div>
 
                 </div>
