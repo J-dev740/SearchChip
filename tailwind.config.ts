@@ -20,6 +20,24 @@ const config: Config = {
       fontFamily:{
         'roboto':['Roboto Mono','monospace'],
         'inter':['Inter', 'sans-serif']
+      },
+      animation:{
+        hit:'fall 4s linear',
+        hit1:'fall1 4s linear',
+
+      },
+      keyframes:{
+        fall:{
+          '0%':{ transform:'translateY(-1000px)'},
+          "50%": { transform: "translateY(45px)" },
+          '100%':{ transform:'translateY(-2px)'},
+
+        },
+        fall1:{
+          '0%':{ transform:'translateY(-1000px)'},
+          "50%": { transform: "translateY(100px)" },
+          '100%':{ transform:'translateY(-2px)'},
+        }
       }
     },
   },

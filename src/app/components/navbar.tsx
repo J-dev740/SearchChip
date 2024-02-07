@@ -53,7 +53,7 @@ function NavBar() {
 
 
         <nav className=" sticky top-0 z-30 flex flex-row justify-between items-center px-[10px]   rounded-[20px]  ">
-            <div className="absolute inset-0 w-full h-fit bg-black bg-opacity-75 flex flex-row z-30 flex-wrap items-center justify-between mx-auto p-2 uppercase font-inter">
+            <div className="absolute inset-0 w-full h-fit bg-black bg-opacity-20 flex flex-row z-30 flex-wrap items-center justify-between mx-auto p-2 uppercase font-inter">
                 <div className=" flex xl:w-[200px] md:w-[100px] h-[50px]">
                     <Link
                     href='/'>
@@ -85,12 +85,12 @@ function NavBar() {
                             </button>
 
                             {/* <!-- Dropdown menu --> */}
-                            <div id="dropdown" className="  hidden bg-black z-50 bg-opacity-100 backdrop-blur-lg rounded-[10px] divide-y divide-white shadow w-auto text-wrap dark:bg-gray-700">
+                            <div id="dropdown" className="  hidden bg-black z-50 ring-1 ring-white bg-opacity-100 backdrop-blur-lg rounded-[10px] divide-y divide-white shadow w-auto text-wrap dark:bg-gray-700">
                                 <ul className="flex  flex-col py-2 text-md text-white dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                     <li>
                                         <a href="#" className="hover:scale-105 ease-in duration-100 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Tamil</a>
                                     </li>
-                                    <li>
+                                    <li  onClick={()=>setToggle(!toggle)}>
                                         <a href="/pages/filmmaking" className="hover:scale-105 ease-in duration-100 block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Malayalam</a>
                                     </li>
 
@@ -98,28 +98,29 @@ function NavBar() {
                             </div>
 
                         </li>
-                        <li className='flex hover:scale-105 ease-in duration-100 '>
-                            <Link href='/pages/movies'>
-                                Movies
+                        <li className='flex hover:scale-105 ease-in duration-100 '> 
+                            <Link  onClick={()=>setToggle(!toggle)}
+                            href='/pages/movies'>
+                                Stories
                             </Link>
                         </li>
-                        <li className='flex hover:scale-105 ease-in duration-100 '>
-                            <Link href='#'>
+                        <li className='flex hover:scale-105 ease-in duration-100 '> 
+                            <Link onClick={()=>setToggle(!toggle)} href='#'>
                                 Reviews
                             </Link>
                         </li>
-                        <li className='flex hover:scale-105 ease-in duration-100 '>
-                            <Link href='#'>
-                                Gallery
+                        <li className='flex hover:scale-105 ease-in duration-100 '> 
+                            <Link onClick={()=>setToggle(!toggle)} href='#'>
+                                Movies
                             </Link>
                         </li>
-                        <li className='flex hover:scale-105 ease-in duration-100 '>
-                            <Link href='#'>
+                        <li className='flex hover:scale-105 ease-in duration-100 '> 
+                            <Link onClick={()=>setToggle(!toggle)} href='#'>
                                 Join WorkShop
                             </Link>
                         </li>
-                        <li className='flex hover:scale-105 ease-in duration-100 '>
-                            <Link href='/pages/contactus'>
+                        <li className='flex hover:scale-105 ease-in duration-100 '> 
+                            <Link onClick={()=>setToggle(!toggle)} href='/pages/contactus'>
                                 contact Us
                             </Link>
                         </li>

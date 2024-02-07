@@ -47,8 +47,8 @@ fetchStories();
     return (
         <div 
         // style={{backgroundImage:`url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg)`}}
-        className=" bg-[url('./bg.webp')] w-full bg-cover bg-center bg-no-repeat min-h-screen h-fit  ">
-            <div className="relative bg-black bg-opacity-75 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
+        className=" bg-[url('./bg.png')] w-full bg-cover bg-center bg-no-repeat min-h-screen h-fit  ">
+            <div className="relative bg-black bg-opacity-85 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
             <div className='max-w-full mt-[150px] md:mt-[50px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
@@ -58,7 +58,7 @@ fetchStories();
                 // style={{backgroundImage:`url(${Logo})`}}
                 >
                 <Image 
-                className='flex md:w-auto md:h-auto w-[120px] h-[120px]'
+                className='flex md:w-auto md:h-auto w-[120px] h-[120px] sm:animate-hit1 animate-hit'
                 src={Logo} alt={'image'} />
                 </div>
                 {/* header */}
@@ -69,20 +69,24 @@ fetchStories();
                     {/* <p className='text-[32px] text-white tracking-widest items-center text-center uppercase font-extrabold font-inter w-full'>Cinema is an art, Not a Business</p> */}
                 </div>
                 {/* aboutus */}
-                <div className=' relative flex flex-col justify-between items-center p-2 text-center   text-wrap'>
+                <div className=' relative flex flex-col justify-between items-center sm:p-2 text-center   text-wrap'>
                     <span className='text-[12px] md:text-[22px] font-bold font-inter uppercase '>About Us</span>
-                    <p className='max-w-full w-[80%] text-[10px] md:text-[22px] font-medium font-roboto py-4 my-2 text-start'>Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
+                    <div className='flex  w-full md:w-[80%] text-[10px] md:text-[22px] font-medium font-roboto py-4 my-2 text-start'>
+                        Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
                         from all walks of life , not just the usual film crowd. Join us in making movies 
                         that break the rules  and share  unique perspectives.Welcome to the new era of FilmMaking.
-                    </p>
-                    <span className='w-full   p-1 text-[10px] md:text-[20px] font-medium text-end uppercase tracking-tight pr-4'>- Amal Akshay</span>
+                    </div>
+                    <div className='flex w-full text-right flex-row justify-end   mr-[20px]  p-1 text-[10px] md:text-[20px] font-medium uppercase tracking-tight '>
+                        <p className='flex'>
+                        - Amal Akshay
+                            </p></div>
                 </div>
 
             </div>
             {/* upload your stories  */}
-            <div className='flex flex-col  justify-between items-start py-2 px-2 mb-[30px] text-[16px] font-bold font-roboto'>
+            <div className='flex flex-col  justify-between items-center py-2 px-2 mb-[30px] text-[16px] font-bold font-roboto'>
                 {/* title */}
-                <span className='font-bold uppercase text-start text-[20px] sm:text-[32px] w-[80%] pl-4'>Short Lessons </span>
+                <span className='font-bold uppercase text-center text-[20px] sm:text-[32px] w-[80%] p-2'>Short Lessons </span>
                 {/* stories div */}
                 <div className='flex  flex-col sm:flex-row sm:w-[80%] w-fit sm:gap-[30px] gap-[10px] sm:overflow-x-scroll overflow-y-scroll no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
                     {

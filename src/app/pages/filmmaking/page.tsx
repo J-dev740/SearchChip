@@ -6,7 +6,7 @@ import YoutubeModal from '@/app/components/youtubeModal';
 function FilmMaking() {
   const youtubelist = [
     {
-      pname:"intro",
+      pname:"Introduction",
       img: "https://media.discordapp.net/attachments/981697615685091358/1197300381940727908/the_akshai_26113_film_making_introduction_for_beginners._photog_10f483fc-c4d9-41d8-b2fc-5388fd27cac4.png?ex=65bac3df&is=65a84edf&hm=4f2e3b99be077b4c636fbb38a7fa843b6f589441ed45266e74248f5006e96ccb&=&format=webp&quality=lossless&width=1806&height=1012",
       url: "https://www.youtube.com/watch?v=QGqMJzywasg&list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh&index=1"
     },
@@ -37,8 +37,8 @@ function FilmMaking() {
       url: "https://www.youtube.com/watch?v=QGqMJzywasg&list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh&index=6"
     },
     {
-      pname:"something",
-      img: "https://media.discordapp.net/attachments/981697615685091358/1197300381940727908/the_akshai_26113_film_making_introduction_for_beginners._photog_10f483fc-c4d9-41d8-b2fc-5388fd27cac4.png?ex=65bac3df&is=65a84edf&hm=4f2e3b99be077b4c636fbb38a7fa843b6f589441ed45266e74248f5006e96ccb&=&format=webp&quality=lossless&width=1806&height=1012",
+      pname:"Release",
+      img: "https://media.discordapp.net/attachments/981697615685091358/1204879558252167308/the_akshai_26113_cinema_theratre_realase_hyper_realistic_image._6039ed6a-5cec-4b84-ab26-8cac6ef02f0a.png?ex=65d65688&is=65c3e188&hm=e5a4c4c44ea5a086a09eb07a3353b327451148463dcfd69f35c7c9bb36416429&=&format=webp&quality=lossless&width=1806&height=1012",
       url: "https://www.youtube.com/watch?v=QGqMJzywasg&list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh&index=7"
     },
 
@@ -58,8 +58,8 @@ function FilmMaking() {
   console.log('pid', pid)
   const [Playlist, setPlaylist] = useState(pid)
   return (
-    <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat ">
-      <div className=" relative  w-full bg-black  bg-opacity-85 py-8 min-h-screen h-fit flex  flex-col justify-center no-scrollbar items-center">
+    <div className="bg-[url('./bg.png')]  bg-cover bg-center bg-no-repeat ">
+      <div className=" relative  w-full bg-black  bg-opacity-85 py-16 mt-2 sm:py-8 min-h-screen h-fit flex  flex-col justify-center no-scrollbar items-center">
         <ul className='grid grid-cols-3 w-full h-fit  gap-y-[20px] gap-x-[10px] '>
           {
             youtubelist.map((item, index) => {

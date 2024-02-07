@@ -49,10 +49,10 @@ const posts=await getBlogPosts();
     // console.log(posts)
     // console.log(posts[1]?.fields?.summary?.content[0]?.content[0].value)
   return (
-    <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat">
+    <div className="bg-[url('./bg.png')]  bg-cover bg-center bg-no-repeat">
     <div className="relative bg-black bg-opacity-75 w-full object-center align-middle py-8   min-h-screen h-fit flex  flex-col justify-center items-center">
 
-        <ul className='flex flex-col justify-between items-center h-screen overflow-y-scroll gap-[30px] md:gap-y-[10px] no-scrollbar p-2 md:w-[80%] w-[98%] '>
+        <ul className='flex flex-col  mt-[20px] justify-between items-start h-screen overflow-y-scroll gap-[30px] md:gap-y-[10px] no-scrollbar p-2 md:w-[80%] w-[98%] '>
             
           {posts.length>0?posts.map((post:any,index)=>{
             return (
