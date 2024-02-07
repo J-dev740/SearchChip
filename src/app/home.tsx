@@ -47,7 +47,7 @@ fetchStories();
     return (
         <div 
         // style={{backgroundImage:`url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg)`}}
-        className=" bg-[url('./bg.png')] w-full bg-cover bg-center bg-no-repeat min-h-screen h-fit  ">
+        className=" bg-[url('./bg.webp')] w-full bg-cover bg-center bg-no-repeat min-h-screen h-fit  ">
             <div className="relative bg-black bg-opacity-85 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 

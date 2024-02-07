@@ -58,7 +58,7 @@ function FilmMaking() {
   console.log('pid', pid)
   const [Playlist, setPlaylist] = useState(pid)
   return (
-    <div className="bg-[url('./bg.png')]  bg-cover bg-center bg-no-repeat ">
+    <div className="bg-[url('./bg.webp')]  bg-cover bg-center bg-no-repeat ">
       <div className=" relative  w-full bg-black  bg-opacity-85 py-16 mt-2 sm:py-8 min-h-screen h-fit flex  flex-col justify-center no-scrollbar items-center">
         <ul className='grid grid-cols-3 w-full h-fit  gap-y-[20px] gap-x-[10px] '>
           {
