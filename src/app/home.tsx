@@ -6,6 +6,7 @@ import logo from '../app/assets/logo.svg'
 import Image from 'next/image';
 import { createClient } from "contentful";
 import ReactPlayer from 'react-player';
+import { CiPlay1 } from "react-icons/ci";
 const client = createClient({
 //   space: "7oo9puuj7iqt",
 //   accessToken: "YhY12sA6qt2h-XslJiNtmYFWysR0vjcXNRlosSk7Tn8",
@@ -76,10 +77,10 @@ fetchStories();
                 {/* aboutus */}
                 <div className=' relative flex flex-col justify-between items-center sm:p-2 text-center   text-wrap'>
                     <span className='text-[12px] md:text-[22px] font-bold font-inter uppercase '>About Us</span>
-                    <div className='flex  w-full md:w-[80%] text-[10px] md:text-[22px] font-medium font-roboto py-4 my-2 text-start'>
-                        Welcome to Prathibha Productions, We are on a Mission to FInd  amazing storytellers
-                        from all walks of life , not just the usual film crowd. Join us in making movies 
-                        that break the rules  and share  unique perspectives.Welcome to the new era of FilmMaking.
+                    <div className='flex  w-full md:w-[80%] text-[10px] md:text-[22px] font-medium font-Satoshi py-4 my-2 text-start'>
+                        Welcome to Prathibha Productions, We are on a Mission to find amazing storytellers
+                        from all walks of life, not just the usual film crowd. Join us in making movies 
+                        that break the rules and share unique perspectives. Welcome to the new era of FilmMaking.
                     </div>
                     <div className='flex w-full text-right flex-row justify-end   mr-[20px]  p-1 text-[10px] md:text-[20px] font-medium uppercase tracking-tight '>
                         <p className='flex'>
@@ -108,7 +109,7 @@ fetchStories();
                                         (<div
                                             onClick={() => setToggle(index)}
                                             className='hidden ease-in duration-200 group-hover:flex flex-row items-center rounded-[20px] justify-center  w-full h-full bg-black bg-opacity-75'>
-                                            <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Play</span>
+                                            <span className='flex w-fit h-fit font-bold text-[20px] text-white font-roboto text-center ease-in duration-150 '><CiPlay1 /></span>
                                         </div>)}
                                         <ReactPlayer
                             controls={true}

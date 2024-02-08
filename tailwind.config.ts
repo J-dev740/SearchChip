@@ -19,7 +19,8 @@ const config: Config = {
       },
       fontFamily:{
         'roboto':['Roboto Mono','monospace'],
-        'inter':['Inter', 'sans-serif']
+        'inter':['Inter', 'sans-serif'],
+        'Satoshi':['satoshi','sans'],
       },
       animation:{
         hit:'fall 4s linear',

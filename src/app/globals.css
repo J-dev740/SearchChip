@@ -32,7 +32,10 @@
     }
   }
 }
-
+@font-face {
+  font-family: 'satoshi';
+  src: url('./Satoshi-Variable.ttf') format('truetype');
+}
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
