@@ -28,14 +28,14 @@ const config: Config = {
       },
       keyframes:{
         fall:{
-          '0%':{ transform:'translateY(-1000px)'},
-          "50%": { transform: "translateY(45px)" },
+          '0%':{ transform:'translateY(-500px)'},
+          "50%": { transform: "translateY(20px)" },
           '100%':{ transform:'translateY(-2px)'},
 
         },
         fall1:{
           '0%':{ transform:'translateY(-1000px)'},
-          "50%": { transform: "translateY(100px)" },
+          "50%": { transform: "translateY(50px)" },
           '100%':{ transform:'translateY(-2px)'},
         }
       }

@@ -1,10 +1,11 @@
 'use client';
 import React, { useEffect, useState } from 'react'
-import { getBlogPosts1 }from '@/utils';
+import { getBlogPosts1,getBlogPosts }from '@/utils';
 import Logo from './logo.png'
 import logo from '../app/assets/logo.svg'
 import Image from 'next/image';
 import { createClient } from "contentful";
+import ReactPlayer from 'react-player';
 const client = createClient({
 //   space: "7oo9puuj7iqt",
 //   accessToken: "YhY12sA6qt2h-XslJiNtmYFWysR0vjcXNRlosSk7Tn8",
@@ -18,7 +19,10 @@ useEffect(() => {
 const fetchStories=async()=>{
 try {
     
-    const stories= await getBlogPosts1('shortStories');
+    // const stories= await getBlogPosts1('shortStories');
+    const stories= await getBlogPosts('shortStories');
+
+
     // const response = await client.getEntries({
     //     content_type: "shortStories",
     //   });
@@ -27,9 +31,9 @@ try {
     console.log(stories);
     const metadata=stories.map((item)=>{
         return {
-            slug:item.fields.slug,
+            vid:item.fields.vid,
             title:item.fields.title,
-            img:item.fields.titleImage
+            img:item?.fields?.thumbnail?.fields?.file.url,
         }
 
     })
@@ -51,7 +55,7 @@ fetchStories();
             <div className="relative bg-black bg-opacity-85 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
-            <div className='max-w-full mt-[150px] md:mt-[50px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
+            <div className='max-w-full mt-[150px] md:mt-[80px] xl:mt-[100px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
                 {/* logo */}
                 <div
                 className='flex object-center self-center '
@@ -95,11 +99,26 @@ fetchStories();
                                 <div className='flex flex-col hover:scale-110 ease-linear duration-150   justify-between  items-center '>
                                     {/* image div */}
                                     <div 
-                                    style={{backgroundImage:`url(https:${item.img.fields.file.url})`}}
+                                    style={{backgroundImage:`url(https:${item.img})`}}
                                     className='group flex sm:w-[200px] w-[200px] h-[250px] sm:h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
-                                        <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
-                                            <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Go to storyline</span>
-                                        </div>
+                                        {/* <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
+                                            <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Play</span>
+                                        </div> */}
+                                        <ReactPlayer
+                            controls={true}
+                            url={item.vid}
+                            // width='100%'
+                            // height='100%'
+                            // light={true}
+                            wrapper={({ children }) => {
+                                return (
+                                    <div className='flex flex-col w-[100%] h-[100%]  rounded-[20px] overflow-hidden object-center object-cover '>
+                                        {children}
+                                    </div>
+                                )
+                            }}
+                            // url={vidLink} 
+                            />
                                     </div>
                                     {/* title div  */}
                                     <div className='flex w-full text-end items-center'>{item.title}</div>

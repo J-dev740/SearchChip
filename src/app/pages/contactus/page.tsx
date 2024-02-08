@@ -16,7 +16,7 @@ function ContactUs() {
 
             </div> */}
             {/* drop a mail part  */}
-            <div className='flex flex-col justify-between items-center gap-[20px] w-full h-fit text-bold text-white text-xl  md:text-3xl backdrop-blur-md  rounded-b-[30px] p-4'>
+            <div className='flex flex-col justify-between items-center gap-[20px] w-full h-fit text-bold text-white text-xl  md:text-3xl   rounded-b-[30px] p-4'>
                 <p>Drop us a mail @</p>
                 <div className='font-inter font-bold underline underline-offset-2'>Prathibhaproduction@gmail.com</div>
             </div>
