@@ -63,7 +63,7 @@ const posts=await getBlogPosts();
                 <div className='flex md:flex-row flex-col md:justify-start items-center p-4  gap-[10px] md:items-center w-fit text-wrap'>
                     {/* image part  */}
                     <Link
-                    className='flex self-start p-2'
+                    className='flex self-start '
                     href={'/pages/movies/'+post.fields.slug}
                     >
                     <div
