@@ -70,7 +70,7 @@ function NavBar() {
                     {/* </a> */}
                 </div>
                 <button 
-                onClick={()=>setToggle(!toggle)}
+                onClick={()=>setToggle(true)}
                  type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" >
                     {/* <span className="sr-only">Open main menu</span> */}
                     <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -81,7 +81,7 @@ function NavBar() {
                 // onClick={()=>setToggle(!toggle)}
                  className={`${toggle?'flex flex-row justify-end items-center ':'hidden'} w-full   h-fit   md:flex md:w-auto md:p-2`  }>
                     <ul 
-                    onMouseLeave={()=>setToggle(!toggle)}
+                    onMouseLeave={()=>setToggle(false)}
                     className="  bg-black bg-opacity-20 font-bold md:text-[15px]  font-roboto md:justify-between text-white flex flex-col items-end space-y-4 px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[50px] space-x-[20px] rtl:space-x-reverse md:mt-0 ">
                         <li className='flex flex-row  flex-grow  md:flex-col'>
 
