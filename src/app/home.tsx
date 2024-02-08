@@ -33,7 +33,7 @@ try {
         return {
             vid:item.fields.vid,
             title:item.fields.title,
-            img:item?.fields?.thumbnail?.fields?.file.url,
+            // img:item?.fields?.thumbnail?.fields?.file.url,
         }
 
     })
@@ -99,7 +99,7 @@ fetchStories();
                                 <div className='flex flex-col hover:scale-110 ease-linear duration-150   justify-between  items-center '>
                                     {/* image div */}
                                     <div 
-                                    style={{backgroundImage:`url(https:${item.img})`}}
+                                    // style={{backgroundImage:`url(https:${item.img})`}}
                                     className='group flex sm:w-[200px] w-[200px] h-[250px] sm:h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
                                         {/* <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
                                             <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Play</span>
