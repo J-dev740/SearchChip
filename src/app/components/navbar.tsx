@@ -54,7 +54,9 @@ function NavBar() {
 
         <nav className=" sticky top-0 z-30 flex flex-row justify-between items-center px-[10px]   rounded-[20px]  ">
             <div className="absolute inset-0 w-full h-fit bg-black bg-opacity-20 flex flex-row z-30 flex-wrap items-center justify-between mx-auto p-2 uppercase font-inter">
-                <div className=" flex xl:w-[200px] md:w-[100px] h-[50px]">
+                <div 
+                onClick={()=>setToggle(false)}
+                className=" flex xl:w-[200px] md:w-[100px] h-[50px]">
                     <Link
                     href='/'>
                     <Image 

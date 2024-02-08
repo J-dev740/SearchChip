@@ -75,9 +75,9 @@ fetchStories();
                     {/* <p className='text-[32px] text-white tracking-widest items-center text-center uppercase font-extrabold font-inter w-full'>Cinema is an art, Not a Business</p> */}
                 </div>
                 {/* aboutus */}
-                <div className=' relative flex flex-col justify-between items-center sm:p-2 text-center   text-wrap'>
+                <div className=' relative flex flex-col justify-between items-center sm:p-2 text-center '>
                     <span className='text-[12px] md:text-[22px] font-bold font-inter uppercase '>About Us</span>
-                    <div className='flex  w-full md:w-[80%] text-[10px] md:text-[22px] font-medium font-Satoshi py-4 my-2 text-start'>
+                    <div className='flex  w-[110%] sm:w-full tracking-wide  md:w-[80%] text-[10px] md:text-[22px] font-medium font-Satoshi  py-4 my-2 text-start text-wrap'>
                         Welcome to Prathibha Productions, We are on a Mission to find amazing storytellers
                         from all walks of life, not just the usual film crowd. Join us in making movies 
                         that break the rules and share unique perspectives. Welcome to the new era of FilmMaking.
