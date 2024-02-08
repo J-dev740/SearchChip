@@ -28,18 +28,20 @@ function SideBar() {
     <div className={`z-50 gap-[80px] md:gap-[90px] py-2 md:py-4
     bg-slate-800 bg-opacity-25 backdrop-blur-lg
  rounded-[20px] px-2 md:px-4  h-fit w-fit flex  ${screenWidth>760?"fixed flex-col right-8 top-36":"absolute flex-row  left-[26%]  bottom-4"}  gap-8 md:justify-between items-center   `}>
-  <Link href='https://www.facebook.com/amal.akshy'>
+  <Link target='_blank' href='https://www.facebook.com/amal.akshy'>
+   
         <FaFacebook className='flex w-[20px] h-[20px] md:w-[35px] md:h-[35px] bg-transparent text-white hover:cursor-pointer' ></FaFacebook>
+  
   </Link>
-  <Link href='https://wa.me/9744204511'>
+  <Link target='_blank' href='https://wa.me/9744204511'>
         <FaWhatsapp className='flex w-[20px] h-[20px] md:w-[35px] md:h-[35px]  bg-transparent text-white hover:cursor-pointer' ></FaWhatsapp>
 
   </Link>
-  <Link href='https://www.instagram.com/the_akshai'>
+  <Link target='_blank' href='https://www.instagram.com/the_akshai'>
         <FaInstagram className='flex w-[20px] h-[20px] md:w-[35px] md:h-[35px] bg-transparent text-white hover:cursor-pointer' ></FaInstagram>
   
   </Link>
-  <Link href='https://www.youtube.com/AmalAkshay'>
+  <Link target='_blank' href='https://www.youtube.com/AmalAkshay'>
         <GrYoutube className='flex w-[20px] h-[20px] md:w-[35px] md:h-[35px] bg-transparent text-white hover:cursor-pointer' ></GrYoutube>
   
   </Link>

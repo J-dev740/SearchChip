@@ -15,6 +15,7 @@ const client = createClient({
 
 function LandingPage() {
 const [stories,setStories]=useState<any[]>([])
+const [toggle,setToggle]=useState(-1);
 useEffect(() => {
 const fetchStories=async()=>{
 try {
@@ -33,7 +34,7 @@ try {
         return {
             vid:item.fields.vid,
             title:item.fields.title,
-            // img:item?.fields?.thumbnail?.fields?.file.url,
+            img:item?.fields?.thumbnail,
         }
 
     })
@@ -52,17 +53,17 @@ fetchStories();
         <div 
         // style={{backgroundImage:`url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg)`}}
         className=" bg-[url('./bg.webp')] w-full bg-cover bg-center bg-no-repeat min-h-screen h-fit  ">
-            <div className="relative bg-black bg-opacity-85 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
+            <div className="relative bg-black bg-opacity-80 w-full   min-h-screen h-fit flex  flex-col justify-center items-center">
             {/* social media section absolute */}
 
-            <div className='max-w-full mt-[150px] md:mt-[80px] xl:mt-[100px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
+            <div className='max-w-full mt-[150px] md:mt-[100px] xl:mt-[100px]  w-[80%]  h-fit  flex flex-col gap-2 sm:gap-4 items-center text-wrap'>
                 {/* logo */}
                 <div
                 className='flex object-center self-center '
                 // style={{backgroundImage:`url(${Logo})`}}
                 >
                 <Image 
-                className='flex md:w-auto md:h-auto w-[120px] h-[120px] sm:animate-hit1 animate-hit'
+                className='flex md:w-auto md:h-auto w-[120px] h-[120px] -mb-4 sm:animate-hit1 animate-hit'
                 src={Logo} alt={'image'} />
                 </div>
                 {/* header */}
@@ -92,27 +93,33 @@ fetchStories();
                 {/* title */}
                 <span className='font-bold uppercase text-center text-[20px] sm:text-[32px] w-[80%] p-2'>Short Lessons </span>
                 {/* stories div */}
-                <div className='flex  flex-col sm:flex-row sm:w-[80%] w-fit sm:gap-[30px] gap-[10px] sm:overflow-x-scroll overflow-y-scroll no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
+                <div className='flex  flex-col sm:flex-row sm:w-[80%] w-fit sm:gap-[30px] gap-[15px] sm:overflow-x-scroll overflow-y-scroll no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
                     {
                        stories.length>0? stories.map((item,index)=>{
                             return (
-                                <div className='flex flex-col hover:scale-110 ease-linear duration-150   justify-between  items-center '>
+                                <div 
+                                key={index}
+                                className='flex flex-col hover:scale-110 ease-linear duration-150   justify-between  items-center '>
                                     {/* image div */}
                                     <div 
-                                    // style={{backgroundImage:`url(https:${item.img})`}}
-                                    className='group flex sm:w-[200px] w-[200px] h-[250px] sm:h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
-                                        {/* <div className='hidden ease-in duration-200 group-hover:flex flex-row items-center justify-center  w-full h-full bg-black bg-opacity-75'>
+                                        style={{backgroundImage:`url(https:${item.img.fields.file.url})`}}
+                                        className='group flex sm:w-[200px] w-[200px] h-[250px] sm:h-[300px] rounded-[20px] bg-cover bg-center bg-no-repeat '>
+                                        {!(toggle==index) && 
+                                        (<div
+                                            onClick={() => setToggle(index)}
+                                            className='hidden ease-in duration-200 group-hover:flex flex-row items-center rounded-[20px] justify-center  w-full h-full bg-black bg-opacity-75'>
                                             <span className='flex w-fit h-fit font-extralight text-white font-roboto text-center ease-in duration-150 '>Play</span>
-                                        </div> */}
+                                        </div>)}
                                         <ReactPlayer
                             controls={true}
                             url={item.vid}
+                            playing={(toggle==index?true:false)}
                             // width='100%'
                             // height='100%'
                             // light={true}
                             wrapper={({ children }) => {
                                 return (
-                                    <div className='flex flex-col w-[100%] h-[100%]  rounded-[20px] overflow-hidden object-center object-cover '>
+                                    <div className={`${(toggle==index)?'flex':'hidden'} flex-col w-[100%] h-[100%]  rounded-[20px] overflow-hidden object-center object-cover `}>
                                         {children}
                                     </div>
                                 )

@@ -75,8 +75,12 @@ function NavBar() {
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={`${toggle?'flex flex-row justify-end items-center ':'hidden'} w-full   h-fit   md:flex md:w-auto md:p-2`  }>
-                    <ul className="  bg-black bg-opacity-60 font-bold md:text-[15px]  font-roboto md:justify-between text-white flex flex-col items-end space-y-4 px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[50px] space-x-[20px] rtl:space-x-reverse md:mt-0 ">
+                <div
+                // onClick={()=>setToggle(!toggle)}
+                 className={`${toggle?'flex flex-row justify-end items-center ':'hidden'} w-full   h-fit   md:flex md:w-auto md:p-2`  }>
+                    <ul 
+                    onMouseLeave={()=>setToggle(!toggle)}
+                    className="  bg-black bg-opacity-20 font-bold md:text-[15px]  font-roboto md:justify-between text-white flex flex-col items-end space-y-4 px-4 md:p-0 mt-2  rounded-lg md:flex-row md:space-x-[50px] space-x-[20px] rtl:space-x-reverse md:mt-0 ">
                         <li className='flex flex-row  flex-grow  md:flex-col'>
 
                             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className=" hover:scale-105 ease-in duration-100 text-center bg-transparent inline-flex items-center " type="button">Learn FilmMaking <svg className="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
