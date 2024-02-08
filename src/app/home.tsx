@@ -82,7 +82,7 @@ fetchStories();
                         from all walks of life, not just the usual film crowd. Join us in making movies 
                         that break the rules and share unique perspectives. Welcome to the new era of FilmMaking.
                     </div>
-                    <div className='flex w-full text-right flex-row justify-end   mr-[20px]  p-1 text-[10px] md:text-[20px] font-medium uppercase tracking-tight '>
+                    <div className='flex w-full text-right flex-row justify-end  -mt-4   mr-[20px]  p-1 text-[10px] md:text-[20px] font-medium uppercase tracking-tight '>
                         <p className='flex'>
                         - Amal Akshay
                             </p></div>
