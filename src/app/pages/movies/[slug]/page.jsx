@@ -22,7 +22,7 @@ const Posts = async ({ params }) => {
   const { title, summary, titleImge, story } = post.items[0].fields;
   console.log(title, summary, titleImge);
   return (
-    <div className="relative flex w-screen h-screen   bg-[url('./bg.webp')] bg-opacity-75  bg-cover bg-center bg-no-repeat   flex-col justify-center items-center">
+    <div className="relative flex w-screen h-screen text-white   bg-[url('./bg.webp')] bg-opacity-75  bg-cover bg-center bg-no-repeat   flex-col justify-center items-center">
       <div className="flex flex-row w-full  h-screen md:pt-4   justify-center items-start bg-black bg-opacity-90 ">
       <div className="flex w-full h-full overflow-y-scroll no-scrollbar items-center justify-start ">
         <div className="flex flex-col justify-between gap-[10px] items-center w-full h-fit text-wrap">

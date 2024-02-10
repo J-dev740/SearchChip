@@ -76,14 +76,17 @@ fetchStories();
                 </div>
                 {/* aboutus */}
                 <div className=' relative flex flex-col justify-between items-center sm:p-2 text-center '>
-                    <span className='text-[12px] md:text-[22px] font-bold font-inter uppercase '>About Us</span>
-                    <div className='flex  w-[110%] sm:w-full tracking-wide  md:w-[80%] text-[10px] md:text-[22px] font-medium font-Satoshi  py-4 my-2 text-start text-wrap'>
-                        Welcome to Prathibha Productions, We are on a Mission to find amazing storytellers
-                        from all walks of life, not just the usual film crowd. Join us in making movies 
-                        that break the rules and share unique perspectives. Welcome to the new era of FilmMaking.
+                    <span className='text-[12px] md:text-[22px] font-normal font-inter underline underline-offset-2 text-white '>About Us</span>
+                    <div className='flex  w-[110%] sm:w-full tracking-wide  md:w-[80%] text-[10px] md:text-[22px] font-normal text-white font-Satoshi  py-4 my-2 text-start text-wrap'>
+                    Welcome to Prathibha Productions! We're on a mission to discover exceptional storytellers
+                     from every background, not just the usual film crowd. If you're a talented newcomer eager
+                      to break into the Indian film industry, you've come to the right place. We're more than just 
+                      a film production company; we're a mini-film school too. Yes, we will teach you complete film 
+                      lessons for free. Join us in making movies that break the rules and share unique perspectives.
+                       Welcome to the new era of filmmaking!
                     </div>
                     <div className='flex w-full text-right flex-row justify-end  -mt-4   mr-[20px]  p-1 text-[10px] md:text-[20px] font-medium uppercase tracking-tight '>
-                        <p className='flex'>
+                        <p className='flex text-white '>
                         - Amal Akshay
                             </p></div>
                 </div>
@@ -92,7 +95,7 @@ fetchStories();
             {/* upload your stories  */}
             <div className='flex flex-col  justify-between items-center py-2 px-2 mb-[30px] text-[16px] font-bold font-roboto'>
                 {/* title */}
-                <span className='font-bold uppercase text-center text-[20px] sm:text-[32px] w-[80%] p-2'>Short Lessons </span>
+                <span className='font-bold uppercase text-center text-[20px] sm:text-[32px] w-[80%] text-white p-2'>Short Lessons </span>
                 {/* stories div */}
                 <div className='flex  flex-col sm:flex-row sm:w-[80%] w-fit sm:gap-[30px] gap-[15px] sm:overflow-x-scroll overflow-y-scroll no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
                     {
@@ -129,7 +132,7 @@ fetchStories();
                             />
                                     </div>
                                     {/* title div  */}
-                                    <div className='flex w-full text-end items-center'>{item.title}</div>
+                                    <div className='flex w-full text-end items-center text-white '>{item.title}</div>
                                 </div>
                             )
                         })
