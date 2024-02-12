@@ -97,7 +97,7 @@ fetchStories();
                 {/* title */}
                 <span className='font-bold uppercase text-center text-[20px] sm:text-[32px] w-[80%] text-white p-2'>Short Lessons </span>
                 {/* stories div */}
-                <div className='flex  flex-row sm:w-[80%] w-[205px] sm:gap-[30px] gap-[15px] overflow-x-scroll  no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
+                <div className='flex  flex-row sm:w-[80%] w-[220px] sm:gap-[30px] gap-[15px] overflow-x-scroll  no-scrollbar sm:h-fit h-[350px]  justify-between items-center py-4 px-4'>
                     {
                        stories.length>0? stories.map((item,index)=>{
                             return (
