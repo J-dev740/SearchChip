@@ -8,7 +8,7 @@ function FilmMaking() {
     {
       pname:"Introduction",
       img: "https://media.discordapp.net/attachments/981697615685091358/1197300381940727908/the_akshai_26113_film_making_introduction_for_beginners._photog_10f483fc-c4d9-41d8-b2fc-5388fd27cac4.png?ex=65bac3df&is=65a84edf&hm=4f2e3b99be077b4c636fbb38a7fa843b6f589441ed45266e74248f5006e96ccb&=&format=webp&quality=lossless&width=1806&height=1012",
-      url: "https://www.youtube.com/watch?v=iArJ_dH-NpQ&list=PLHRASK5W4btGRzMXNtGxKUKASv42jD3OL"
+      url: "https://www.youtube.com/playlist?list=PLHRASK5W4btGRzMXNtGxKUKASv42jD3OL"
     },
     {
       pname:"pre-production",
