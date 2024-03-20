@@ -8,12 +8,12 @@ function FilmMaking() {
     {
       pname:"Introduction",
       img: "https://media.discordapp.net/attachments/981697615685091358/1197300381940727908/the_akshai_26113_film_making_introduction_for_beginners._photog_10f483fc-c4d9-41d8-b2fc-5388fd27cac4.png?ex=65bac3df&is=65a84edf&hm=4f2e3b99be077b4c636fbb38a7fa843b6f589441ed45266e74248f5006e96ccb&=&format=webp&quality=lossless&width=1806&height=1012",
-      url: "https://www.youtube.com/watch?v=QGqMJzywasg&list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh&index=1"
+      url: "https://www.youtube.com/watch?v=iArJ_dH-NpQ&list=PLHRASK5W4btGRzMXNtGxKUKASv42jD3OL"
     },
     {
       pname:"pre-production",
       img: "https://media.discordapp.net/attachments/981697615685091358/1197302029392023644/the_akshai_26113_a_girl_is_writing_scripts_for_movie_making_sto_5a507ff4-8e7f-4df8-8e26-ffe6efbb125b.png?ex=65bac568&is=65a85068&hm=9e639a9a1a1f9b7cca24f9b35c5b52c1be2055ea111e8df1963e556a93232e37&=&format=webp&quality=lossless&width=1806&height=1012",
-      url: "https://www.youtube.com/watch?v=NStlixg1RNw&list=PL4cUxeGkcC9iVGY3ppchN9kIauln8IiEh&index=2"
+      url: "https://www.youtube.com/playlist?list=PLHRASK5W4btFbjwDELcSLVQcvkWyyQGSz"
     },
     {
       pname:"production",
@@ -68,7 +68,11 @@ function FilmMaking() {
                   key={index}
                   className={(index == 0 ? 'sm:col-span-3' : 'sm:col-span-1') + ' flex col-span-3 justify-center items-center rounded-[20px]'}>
                   <div
-                    onClick={() => setModal(true)}
+                    onClick={() =>{
+                      let pid=item.url.split('?list=')[1].toString();
+                      setPlaylist(pid);
+                       setModal(true)}}
+
                     style={{backgroundImage:`url(${item.img})`}}
                     className=' group hover:scale-110 ease-linear duration-300 flex w-[300px] h-[200px] rounded-[10px] bg-white items-center text-wrap justify-center  object-center bg-cover bg-center bg-no-repeat'>
                       <div className='ease-in-out duration-200  flex w-full h-full flex-row items-center justify-center gap-2  bg-black bg-opacity-60 hover:text-center uppercase text-wrap font-bold text-white'>
